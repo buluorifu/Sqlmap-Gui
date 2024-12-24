@@ -26,11 +26,11 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
 
 ### 选择sqlmap.py文件
 
-<img src="/PNG/1.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/1.png" alt="image" style="width:900px;height:700px;">
 
 ### 启动 SQLMap
 
-<img src="/PNG/2.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/2.png" alt="image" style="width:900px;height:700px;">
 
 ### 启动 CMD
 
@@ -38,7 +38,7 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
 因为sqlmap在pyqt5界面内运行会自动交互，如需手动选择，请使用cmd命令执行。
 ```
 
-<img src="/PNG/3.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/3.png" alt="image" style="width:900px;height:700px;">
 
 ### 读取 Request 文件
 
@@ -46,7 +46,7 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
 点击 读取 Request 文件 按钮后，工具会自动生成一个新的请求文件路径。同时，工具会打开一个编辑窗口，允许用户编辑该请求文件。文件名基于当前时间戳生成，确保唯一性。
 ```
 
-<img src="/PNG/4.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/4.png" alt="image" style="width:900px;height:700px;">
 
 ### 读取 URL 列表文件 
 
@@ -54,7 +54,7 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
 点击 读取 URL 列表文件 按钮后，工具会自动生成一个新的 URL 列表文件路径。同时，工具会打开一个编辑窗口，允许用户编辑该文件。文件名基于当前时间戳生成，确保唯一性。
 ```
 
-<img src="/PNG/5.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/5.png" alt="image" style="width:900px;height:700px;">
 
 ### 更新 SQLMap
 
@@ -62,14 +62,14 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
 点击 更新 SQLMap 按钮后，工具会在新的命令提示符窗口中执行 --update 命令，将 SQLMap 更新到最新版本。因为该操作在pyqt5界面内运行，可能会自动选择N，所有弹cmd运行窗口。
 ```
 
-<img src="/PNG/6.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/6.png" alt="image" style="width:900px;height:700px;">
 
 ### 设置代理
 ```shell
 勾选 设置代理 按钮后，工具会自动走代理文件路径。
 ```
 
-<img src="/PNG/7.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/7.png" alt="image" style="width:900px;height:700px;">
 
 ### 命令行输出
 
@@ -82,7 +82,7 @@ SQLMap GUI 是一个基于 PyQt5 的图形用户界面工具，旨在简化 SQLM
     白色：表示其他类型的输出。
 ```
 
-<img src="/PNG/8.png" alt="image" style="width:700px;height:700px;">
+<img src="/PNG/8.png" alt="image" style="width:900px;height:700px;">
 
 ## ⬆️更新日志
 ```
