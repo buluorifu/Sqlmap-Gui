@@ -61,7 +61,7 @@ class MyWindow(QWidget, Ui_Form):
         args = "python " + self.lineEdit.text()
         if self.radioButton.isChecked():
             if self.lineEdit_3.text() != "":
-                args += " -u " + self.lineEdit_3.text()
+                args += " -u \"" + self.lineEdit_3.text() + "\""
             else:
                 text = '未设置URL'
                 img = './img/失败.PNG'
@@ -143,9 +143,15 @@ class MyWindow(QWidget, Ui_Form):
             self.lineEdit_6: " -timeout " + self.lineEdit_6.text(),
         }
 
+        add_dump = False
         for checkbox, char in appoint_map.items():
             if checkbox.text() != "":
                 args += char
+                # 检查是否有 -D, -T, -C 参数
+                if "-D" in char or "-T" in char or "-C" in char:
+                    add_dump = True
+        if add_dump:
+            args += " --dump"
 
         QComboBox_map = {
             self.comboBox_3: " --dbms=" + self.comboBox_3.currentText(),
@@ -159,7 +165,7 @@ class MyWindow(QWidget, Ui_Form):
                 args += char
 
         if self.checkBox_21.isChecked():
-            args += " --cookie " + self.lineEdit_13.text()
+            args += " --cookie=\"" + self.lineEdit_13.text() + "\""
 
         if self.checkBox_20.isChecked():
             args += " --proxy=" + self.lineEdit_10.text()
@@ -197,6 +203,11 @@ class MyWindow(QWidget, Ui_Form):
                 self.process.start("python " + fileName)
 
     def r_file(self):
+        if self.lineEdit.text() == "":
+            text = '未设置sqlmap文件'
+            img = './img/失败.PNG'
+            self.open_tishiwindow(text, img)
+            return
         self.radioButton_3.setChecked(True)
         with open('file_address.yaml', 'r', encoding='utf-8') as file:
             yaml = ruamel.yaml.YAML()
@@ -206,6 +217,11 @@ class MyWindow(QWidget, Ui_Form):
             self.edit_txt(request_file_path, "request文件")
 
     def m_file(self):
+        if self.lineEdit.text() == "":
+            text = '未设置sqlmap文件'
+            img = './img/失败.PNG'
+            self.open_tishiwindow(text, img)
+            return
         self.radioButton_4.setChecked(True)
         with open('file_address.yaml', 'r', encoding='utf-8') as file:
             yaml = ruamel.yaml.YAML()
@@ -295,23 +311,14 @@ class MyWindow(QWidget, Ui_Form):
    
     def eventFilter(self, source, event):
         if event.type() == QtCore.QEvent.KeyPress and source is self.textEdit:
-            if event.key() == QtCore.Qt.Key_Return:
-               
-                cursor = self.textEdit.textCursor()
-
-               
+            if event.key() == QtCore.Qt.Key_Return:               
+                cursor = self.textEdit.textCursor()               
                 user_input = cursor.block().text().strip()
-
-                if user_input: 
-
-                   
-                    self.textEdit.append('')
-
-                   
+                if user_input:     
+                    self.textEdit.append('') 
                     if self.process is not None and self.process.state() == QProcess.Running:
                         self.process.write((user_input + "\n").encode('utf-8'))
-
-               
+             
                 new_cursor = self.textEdit.textCursor()
                 new_cursor.movePosition(QtGui.QTextCursor.End)
                 self.textEdit.setTextCursor(new_cursor)
