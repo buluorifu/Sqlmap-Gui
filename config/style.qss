@@ -1,0 +1,240 @@
+/* light_rz.qss */
+/* 基础样式 */
+QWidget {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 分组框 */
+QGroupBox {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: white;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+    color: #4b5563;
+    font-weight: bold;
+}
+
+/* 复选框 */
+QCheckBox {
+    color: #374151;
+    font-size: 10pt "Microsoft YaHei UI";
+    background: white;
+    font-weight: 500;
+}
+
+/* 标签 */
+QLabel {
+    color: #374151;
+    background-color: white;
+    font-size: 10pt "Microsoft YaHei UI";
+    font-weight: 500;
+}
+
+/* 输入框 */
+QLineEdit {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+}
+
+QLineEdit:focus {
+    border: 1px solid #3b82f6;
+    outline: none;
+}
+
+/* 文本编辑框 */
+QTextEdit {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+    background: white;
+}
+
+/* 按钮基础样式 */
+QPushButton {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 10pt "Microsoft YaHei UI";
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #2563eb;
+}
+
+QPushButton:pressed {
+    background-color: #1d4ed8;
+}
+
+/* 特殊按钮样式 */
+QPushButton#pushButton_4 {
+    background-color: #10b981;
+}
+
+QPushButton#pushButton_4:hover {
+    background-color: #059669;
+}
+
+QPushButton#pushButton_4:pressed {
+    background-color: #047857;
+}
+
+QPushButton#pushButton_2 {
+    background-color: #ef4444;
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: #dc2626;
+}
+
+QPushButton#pushButton_2:pressed {
+    background-color: #b91c1c;
+}
+
+/* 单选按钮 */
+QRadioButton {
+    spacing: 5px;
+    background-color: white;
+    font-weight: 500;
+}
+
+QRadioButton::indicator {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: white;
+    border: 2px solid #d1d5db;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+/* 工具按钮 */
+QToolButton {
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+QToolButton:hover {
+    background-color: #d1d5db;
+}
+
+/* 下拉框 */
+QComboBox {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+    background-color: white;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 1px;
+    border-left-color: #d1d5db;
+    border-left-style: solid;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/down.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    background-color: white;
+    selection-background-color: #e5e7eb;
+    selection-color: #418bf8;
+    min-width: 300px;
+}
+
+/* 下拉框滚动条 */
+QComboBox QAbstractItemView QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
+
+QComboBox QAbstractItemView QScrollBar::track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle {
+    background-color: #c0c0c0;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:hover {
+    background-color: #a0a0a0;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:pressed {
+    background-color: #808080;
+}
+
+/* 复选框 */
+QCheckBox {
+    spacing: 8px;
+    background: transparent;
+    padding: 5px;
+    font-size: 10pt;
+    color: #374151;
+}
+
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid #d1d5db;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background: #3b82f6;
+    border: 2px solid #3b82f6;
+    image: url(icons/check_white.svg);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    border: 2px solid #9ca3af;
+}
+
+QCheckBox::indicator:checked:hover {
+    background: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+
+/* 修改 QTextEdit 自身的滚动条 */
+QTextEdit QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
+
+/* 修改 QComboBox 下拉列表的滚动条 */
+QComboBox QAbstractItemView QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
