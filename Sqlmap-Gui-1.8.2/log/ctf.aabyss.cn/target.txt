@@ -1,1 +1,0 @@
-http://ctf.aabyss.cn/vul/sqli/sqli_str.php?name=1&submit=%E6%9F%A5%E8%AF%A2 (GET)  # C:/Users/coco/Desktop/sqlmap-1.6/sqlmap.py -u http://ctf.aabyss.cn/vul/sqli/sqli_str.php?name=1&submit=%E6%9F%A5%E8%AF%A2 --batch --output-dir=C:/Users/coco/Desktop/Sqlmap-Gui/log/
