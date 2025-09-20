@@ -1,0 +1,321 @@
+/* light_rz.qss */
+/* 基础样式 */
+QWidget {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 分组框 */
+QGroupBox {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: white;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+    color: #4b5563;
+    font-weight: bold;
+}
+
+/* 复选框 */
+QCheckBox {
+    spacing: 5px;
+    font-size: 10pt "Microsoft YaHei UI";
+    background: white;
+}
+
+/* 标签 */
+QLabel {
+    color: #374151;
+    background-color: white;
+    font-size: 10pt "Microsoft YaHei UI";
+    font-weight: 500;
+}
+
+/* 输入框 */
+QLineEdit {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+}
+
+QLineEdit:focus {
+    border: 1px solid #3b82f6;
+    outline: none;
+}
+
+/* 文本编辑框 */
+QTextEdit {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+    background: white;
+}
+
+/* 按钮基础样式 */
+QPushButton {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 10pt "Microsoft YaHei UI";
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #2563eb;
+}
+
+QPushButton:pressed {
+    background-color: #1d4ed8;
+}
+
+/* 特殊按钮样式 */
+QPushButton#pushButton_4 {
+    background-color: #10b981;
+}
+
+QPushButton#pushButton_4:hover {
+    background-color: #059669;
+}
+
+QPushButton#pushButton_4:pressed {
+    background-color: #047857;
+}
+
+QPushButton#pushButton_2 {
+    background-color: #ef4444;
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: #dc2626;
+}
+
+QPushButton#pushButton_2:pressed {
+    background-color: #b91c1c;
+}
+
+/* 单选按钮 */
+QRadioButton {
+    spacing: 5px;
+    background-color: white;
+}
+
+QRadioButton::indicator {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: white;
+    border: 2px solid #d1d5db;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+/* 工具按钮 */
+QToolButton {
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+QToolButton:hover {
+    background-color: #d1d5db;
+}
+
+/* 下拉框 */
+QComboBox {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 10pt "Microsoft YaHei UI";
+    background-color: white;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-left-width: 1px;
+    border-left-color: #d1d5db;
+    border-left-style: solid;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/down.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    background-color: white;
+    selection-background-color: #e5e7eb;
+    selection-color: #418bf8;
+    min-width: 300px;
+}
+
+/* 下拉框滚动条 */
+QComboBox QAbstractItemView QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
+
+QComboBox QAbstractItemView QScrollBar::track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle {
+    background-color: #c0c0c0;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:hover {
+    background-color: #a0a0a0;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:pressed {
+    background-color: #808080;
+}
+
+
+
+/* >>>>>>>>> 表格整体样式 <<<<<<<<< */
+QTableView {
+    border: 1px solid #d1d5db;       /* 1px浅灰色边框 */
+    border-radius: 14px;              /* 圆角14像素 */
+    background-color: white;          /* 白色背景 */
+    alternate-background-color: #f9fafb;  /* 交替行淡灰色背景 */
+    gridline-color: #e5e7eb;         /* 网格线颜色(比边框浅) */
+    font-size: 10pt "Microsoft YaHei UI";  /* 微软雅黑10磅字体 */
+    outline: 0;                       /* 去除选中单元格时的虚线框 */
+}
+
+/* >>>>>>>>> 单元格样式 <<<<<<<<< */
+QTableView::item {
+    padding: 8px;                     /* 单元格内边距8px */
+    border-bottom: 1px solid #e5e7eb; /* 底部1px浅灰色分隔线 */
+}
+
+/* >>>>>>>>> 选中项样式 <<<<<<<<< */
+QTableView::item:selected {
+    background-color: #3b82f6;        /* 选中行蓝色背景 */
+    color: white;                     /* 白色文字 */
+}
+
+/* >>>>>>>>> 表头样式 <<<<<<<<< */
+QHeaderView::section {
+    background-color: #f3f4f6;        /* 表头浅灰色背景 */
+    padding: 8px;                     /* 表头内边距 */
+    border: none;                     /* 无左右边框 */
+    border-bottom: 2px solid #d1d5db; /* 底部2px深灰边框 */
+    font-weight: 500;                 /* 中等加粗(500字重) */
+    text-align: left;                 /* 强制左对齐（关键设置） */
+}
+
+/* >>>>>>>>> 表头选中状态 <<<<<<<<< */
+QHeaderView::section:checked {
+    background-color: #dbeafe;        /* 浅蓝色背景(排序时) */
+}
+
+/* >>>>>>>>> 垂直滚动条样式 <<<<<<<<< */
+QTableView QScrollBar:vertical {
+    width: 12px;                     /* 滑块宽度12px */
+    background: transparent;          /* 轨道透明 */
+    margin: 2px 0;                   /* 上下边距 */
+}
+QTableView QScrollBar::handle:vertical {
+    background: #d1d5db;             /* 滑块灰色 */
+    min-height: 30px;                /* 最小高度30px */
+    border-radius: 6px;               /* 圆角6px */
+}
+QTableView QScrollBar::add-line:vertical,
+QTableView QScrollBar::sub-line:vertical {
+    height: 0px;                     /* 隐藏上下箭头 */
+    background: none;
+}
+
+/* >>>>>>>>> 水平滚动条样式 <<<<<<<<< */
+QTableView QScrollBar:horizontal {
+    height: 12px;                    /* 滑块高度12px */
+    background: transparent;         /* 轨道透明 */
+    margin: 0 2px;                   /* 左右边距 */
+}
+QTableView QScrollBar::handle:horizontal {
+    background: #d1d5db;             /* 滑块灰色 */
+    min-width: 30px;                 /* 最小宽度30px */
+    border-radius: 6px;               /* 圆角6px */
+}
+QTableView QScrollBar::add-line:horizontal,
+QTableView QScrollBar::sub-line:horizontal {
+    width: 0px;                      /* 隐藏左右箭头 */
+    background: none;
+}
+
+/* >>>>>>>>> 共用样式 <<<<<<<<< */
+QTableView QScrollBar:hover {
+    background: #f0f0f0;             /* 悬停时轨道变浅灰 */
+}
+QTableView QScrollBar::handle:hover {
+    background: #a8a8a8;             /* 悬停时滑块变深灰 */
+}
+
+
+/* 复选框 */
+QCheckBox {
+    spacing: 8px;
+    background: transparent;
+    padding: 5px;
+    font-size: 10pt;
+    color: #374151;
+}
+
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid #d1d5db;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background: #3b82f6;
+    border: 2px solid #3b82f6;
+    image: url(icons/check_white.svg);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    border: 2px solid #9ca3af;
+}
+
+QCheckBox::indicator:checked:hover {
+    background: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+
+/* 修改 QTextEdit 自身的滚动条 */
+QTextEdit QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
+
+/* 修改 QComboBox 下拉列表的滚动条 */
+QComboBox QAbstractItemView QScrollBar {
+    width: 8px;
+    background-color: transparent;
+}
